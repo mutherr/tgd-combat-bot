@@ -2,3 +2,8 @@
 Code for a WIP bot for running combat in an online session of [The Gloaming Diaries](https://timorjack.itch.io/gloaming-diaries)
 
 The code for the bot interaction is stored in `/modules/bot`, while game related logic is stored in `modules/game`
+
+# Config
+
+To run the bot, a secret key for the discord bot is needed in `.env`, along the lines of
+`DISCORD_SECRET = "<secret here>"`
