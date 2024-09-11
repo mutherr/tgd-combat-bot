@@ -17,5 +17,4 @@ client = CombatClient()
 
 #let it run
 api_key= os.getenv("DISCORD_SECRET")
-print(api_key)
 client.run(api_key)
