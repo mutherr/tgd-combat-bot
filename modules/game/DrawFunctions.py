@@ -4,16 +4,16 @@
 # Author: Isabel Muther
 
 import discord
-from discord.ext import commands
 import random
 
-# adding in the list of cards and the possible number values
+# list of major arcana
 cards = ["The Fool", "The Magician", "The High Priestess", "The Empress", "The Emperor", "The Hierophant", "The Lovers", "The Chariot", "Strength", "The Hermit", "**Wheel of Fortune** :ferris_wheel:", "Justice", "The Hanged Man", "Death", "Temperance", "The Devil", "**The Tower** :tokyo_tower:", "The Star", "The Moon", "The Sun", "Judgement", "The World"]
 
 #Helper function to randomly draw a card.
 def draw_card():
     drawResult = random.randint(0,22)
-    return drawResult
+    #add 1 to adjust for zero indexing
+    return drawResult + 1
 
 #send a randomly drawn card to bot
 def random_draw():

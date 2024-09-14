@@ -16,5 +16,5 @@ load_dotenv()
 client = CombatClient()
 
 #let it run
-api_key= os.getenv("DISCORD_SECRET")
+api_key = os.getenv("DISCORD_SECRET")
 client.run(api_key)
