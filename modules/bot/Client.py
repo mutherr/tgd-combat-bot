@@ -5,7 +5,6 @@
 import discord
 from discord.ext import commands
 
-from ..game.DrawFunctions import *
 from modules.bot.Interactions import Interactions
 
 class CombatClient(commands.Bot):
