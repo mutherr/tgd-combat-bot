@@ -4,10 +4,11 @@
 import discord
 from discord.ext import commands
 from modules.game import DrawFunctions
+from modules.game.GameFunctions import Game
 
 class Interactions(commands.Cog):
-    def __init__(self):
-        pass
+    def __init__(self):  
+      self.game = Game()
         
     @discord.app_commands.command(name = "draw", description = "Randomly draw a tarot card")
     async def draw(self,interaction: discord.Interaction):
