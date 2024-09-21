@@ -2,10 +2,8 @@
 #
 # Author: Isabel Muther
 
-import discord
 from dotenv import load_dotenv
 import os
-import random
 
 from modules.bot.Client import CombatClient
 
