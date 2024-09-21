@@ -3,8 +3,9 @@
 # Author: Isabel Muther
 
 import discord
+from discord.ext import commands
 
-from ..game.DeckFunctions import *
+from ..game.DrawFunctions import *
 from modules.bot.Interactions import Interactions
 
 class CombatClient(commands.Bot):
