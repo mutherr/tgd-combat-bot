@@ -7,3 +7,7 @@ The code for the bot interaction is stored in `/modules/bot`, while game related
 
 To run the bot, a secret key for the discord bot is needed in `.env`, along the lines of
 `DISCORD_SECRET = "<secret here>"`
+
+# Backend Tests
+
+To test the bot's backend, run `pytest .\tests\gameTests.py -vv` from the root directory.

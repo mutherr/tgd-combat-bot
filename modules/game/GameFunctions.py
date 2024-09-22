@@ -24,14 +24,17 @@ class Game:
         return f"{player} will play {suit}"
     
     def end_turn(self):
-        turnDescription = f"Ending turn {self.turnCount}, with chosen suits:\n"
+        turnDescription = f"Ending turn {self.turnCount}, with chosen suits:\n\n"
 
         for player,suit in self.playerChoices.items():
             turnDescription += f"{player}: {suit}\n"
+            self.playerChoices[player] = ""
 
         self.turnCount += 1
         return turnDescription.strip()
     
     def reset(self):
+        self.turnCount = 1
+        self.playerChoices = {}
         return "Reset game state"
     
