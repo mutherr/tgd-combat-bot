@@ -11,16 +11,26 @@ class Game:
     def __init__(self):
         pass
 
-    def choose_card(self,player,suit):
+    def choose_suit(self,player,suit):
+        #check if the played suit is an option
         if suit.lower() not in self.suits:
-            return "invalid Suit Specificed"
+            return "Invalid Suit Specified"
+        
+        #if we've not seen a move from this player before, add an entry to the choices table
+        if player not in self.playerChoices:
+            self.playerChoices[player] = ""
+        self.playerChoices[player] = suit
+
         return f"{player} will play {suit}"
     
-    def show_hand(self,player):
-        return "Placeholder hand representation"
-    
     def end_turn(self):
-        return "Turn ended"
+        turnDescription = f"Ending turn {self.turnCount}, with chosen suits:\n"
+
+        for player,suit in self.playerChoices.items():
+            turnDescription += f"{player}: {suit}\n"
+
+        self.turnCount += 1
+        return turnDescription.strip()
     
     def reset(self):
         return "Reset game state"
