@@ -1,5 +1,9 @@
 #bookkeeping for card plays in combat and keeping track of turn count
 #
+#Post-beltane this will require a lot of reworking as players will have individual decks and hands.
+# We'll need a player class with its own deck object instantiated for each player rather than a
+# simple table of strings
+#
 #Author: Isabel Muther
 
 class Game:
