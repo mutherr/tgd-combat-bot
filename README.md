@@ -3,6 +3,10 @@ Code for a WIP bot for running combat in an online session of [The Gloaming Diar
 
 The code for the bot interaction is stored in `/modules/bot`, while game related logic is stored in `modules/game`
 
+# Running the bot
+
+To start up the bot, simply run `python main.py` from the main project directory.
+
 # Config
 
 To run the bot, a secret key for the discord bot is needed in `.env`, along the lines of
