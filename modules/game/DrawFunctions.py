@@ -17,12 +17,12 @@ def draw_card():
 #send a randomly drawn card to bot
 def random_draw():
     drawResult = draw_card() 
-    return "You drew %s! (%d)"%(cards[drawResult], drawResult + 1)
+    return "You drew %s! (%d)"%(cards[drawResult], drawResult)
 
 # send a trait drawn card result to bot
 def random_draw_with_trait(traitValue):
     drawResult = draw_card()
-    finalResult = drawResult + 1 + traitValue
+    finalResult = drawResult + traitValue
     return "You drew %s! (%d)"%(cards[drawResult], finalResult)
 
 # send a trait, blessed and cursed drawn card result to bot
@@ -34,6 +34,6 @@ def random_draw_with_modifier(traitValue, modifier):
         mod = -3
     else:
         return "Unknown modifier. Enter b for blessed or c for cursed. For a standard trait draw, use `/drawtrait`"
-    finalResult = drawResult + 1 + traitValue + mod
+    finalResult = drawResult + traitValue + mod
     return "You drew %s! (%d)"%(cards[drawResult], finalResult)
 
